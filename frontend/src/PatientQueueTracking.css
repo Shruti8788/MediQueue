@@ -1,0 +1,247 @@
+
+.tracking-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tracking-container h2 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.tracking-container form {
+  display: flex;
+  gap: 10px;
+}
+
+.tracking-container input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.tracking-container button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.tracking-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tracking-card {
+  margin-top: 25px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+}
+
+.tracking-card h3 {
+  color: #1d4ed8;
+}
+
+.tracking-card p {
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.error {
+  color: #dc2626;
+  margin-top: 15px;
+}
+
+/* Tracking page */
+.tracking-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 28px;
+  background: linear-gradient(145deg, #f8fafc, #eff6ff);
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(30, 64, 175, 0.08);
+  animation: trackingFadeIn 0.5s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.tracking-container:hover {
+  box-shadow: 0 12px 30px rgba(30, 64, 175, 0.13);
+  transform: translateY(-2px);
+}
+
+.tracking-container h2 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 24px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.tracking-container form {
+  display: flex;
+  gap: 10px;
+}
+
+.tracking-container input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tracking-container input:focus {
+  border-color: #284175;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.tracking-container button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #375494, #153284);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.tracking-container button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #334a88, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.25);
+}
+
+.tracking-container button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.tracking-container button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+.tracking-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Tracking result */
+.tracking-card {
+  margin-top: 25px;
+  padding: 22px;
+  background: white;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  animation: trackingSlideUp 0.4s ease;
+  transition: box-shadow 0.3s ease;
+}
+
+.tracking-card:hover {
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.1);
+}
+
+.tracking-card h3 {
+  color:  #1d455b;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.tracking-card p {
+  margin: 12px 0;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-radius: 7px;
+  color: #334155;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  transition: background 0.2s ease;
+}
+
+.tracking-card p:hover {
+  background: #eff6ff;
+}
+
+/* Error message */
+.error {
+  color: #dc2626;
+  margin-top: 15px;
+  padding: 12px 14px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  animation: trackingFadeIn 0.3s ease;
+}
+
+/* Animations */
+@keyframes trackingFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes trackingSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .tracking-container {
+    margin: 20px 12px;
+    padding: 20px;
+  }
+
+  .tracking-container h2 {
+    font-size: 22px;
+  }
+
+  .tracking-container form {
+    flex-direction: column;
+  }
+
+  .tracking-container button {
+    width: 100%;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .tracking-container,
+  .tracking-card,
+  .tracking-container button,
+  .tracking-container input {
+    animation: none;
+    transition: none;
+  }
+}
